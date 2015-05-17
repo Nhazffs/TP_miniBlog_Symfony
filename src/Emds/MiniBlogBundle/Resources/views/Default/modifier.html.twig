@@ -1,0 +1,8 @@
+{# modifier.html.twig : Modifier une article #}
+{% extends "EmdsMiniBlogBundle::layout.html.twig" %}
+{% block title %}{{parent()}} - Modifier un message{% endblock %}
+{% block miniblog_body %}
+    <h2> Modifier le message </h2>
+<br />
+{% include "EmdsMiniBlogBundle:Default:form.html.twig" %}
+{% endblock %}

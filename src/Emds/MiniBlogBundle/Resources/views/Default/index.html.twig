@@ -1,0 +1,17 @@
+{# index.html.twig : Index de la partie blog #}
+{% extends "EmdsMiniBlogBundle::layout.html.twig" %}
+{% block title %}{{parent()}} - liste des messages{% endblock %}
+{% block miniblog_body %}
+    <h2>Liste des messages</h2>
+    <p>
+        {% for message in messages %}
+        {{message.date|date('d/m/Y')}} :
+        <a href="{{ path('EmdsMiniBlogBundle_afficher',
+        {'id': message.id}) }}">
+        {{ message.titre }}
+        </a>
+        (par {{message.auteur}})
+        <br />
+        {% endfor %}
+    </p>
+{% endblock %}

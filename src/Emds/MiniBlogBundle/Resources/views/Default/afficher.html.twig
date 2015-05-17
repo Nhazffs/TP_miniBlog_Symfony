@@ -1,0 +1,18 @@
+{# afficher.html.twig : Afficher un message #}
+{% extends "EmdsMiniBlogBundle::layout.html.twig" %}
+{% block title %}{{parent()}} - Affiche le message{% endblock %}
+
+{% block miniblog_body %}
+<h2>{{message.titre}}</h2>
+date : {{message.date|date('d/m/Y')}} <br />
+auteur : {{message.auteur}} <br /><br /><br />
+<p>
+{{message.contenu}}
+</p>
+<br /><br />
+<p>
+    <a href="{{path('EmdsMiniBlogBundle_modifier', {'id': message.id})}}"> modifier ce message </a>
+    <br />
+    <a href="{{path('EmdsMiniBlogBundle_supprimer', {'id': message.id})}}"> supprimer ce message </a>
+</p>
+{% endblock %}

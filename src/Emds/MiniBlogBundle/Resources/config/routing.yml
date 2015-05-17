@@ -1,0 +1,21 @@
+EmdsMiniBlogBundle_homepage:
+    path:     /miniblog/
+    defaults: { _controller: EmdsMiniBlogBundle:Default:index }
+EmdsMiniBlogBundle_afficher:
+    path: /miniblog/afficher/{id}
+    defaults: { _controller: EmdsMiniBlogBundle:Default:afficher }
+    requirements:
+        id: \d+
+EmdsMiniBlogBundle_ajouter:
+    path: /miniblog/ajouter
+    defaults: { _controller: EmdsMiniBlogBundle:Default:ajouter }
+EmdsMiniBlogBundle_modifier:
+    path: /miniblog/modifier/{id}
+    defaults: { _controller: EmdsMiniBlogBundle:Default:modifier }
+    requirements:
+        id: \d+
+EmdsMiniBlogBundle_supprimer:
+    path: /miniblog/supprimer/{id}
+    defaults: { _controller: EmdsMiniBlogBundle:Default:supprimer }
+    requirements:
+        id: \d+
